@@ -2,10 +2,12 @@
  This is an api only rails application that give json reponses and exposes different endpoints.
 
   ### Prerequisites
+    
     ```
         ruby >= 2.4
         rails >= 5.1
     ```
+
   ### SETUP AND CONFIGURATIONS
   1. clone form command prompt
      ```
@@ -16,6 +18,8 @@
   3. install bundle
      ```
       bundle install
+      # Update database.yml file for any changes in database name
+      rake db:create db:migrate
      ```
   4. Start server
         ```
