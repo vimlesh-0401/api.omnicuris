@@ -1,3 +1,9 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
 default: &default
   adapter: mysql2
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
@@ -5,7 +11,16 @@ default: &default
 
 development:
   <<: *default
-  database: database_name
-  username: username
-  password: password
-  host: locahosts
+  database: c9
+  username: vimleshpatel
+  host: 0.0.0.0
+  
+  
+## start MySQL. Will create an empty database on first start
+# mysql-ctl start
+
+## stop MySQL
+# mysql-ctl stop
+
+## run the MySQL interactive shell
+# mysql-ctl cli
