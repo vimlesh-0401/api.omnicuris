@@ -12,32 +12,32 @@
 
 ActiveRecord::Schema.define(version: 20190128174908) do
 
-  create_table "items", force: :cascade do |t|
+  create_table "items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "name"
     t.text "description"
     t.integer "quantity", default: 0
-    t.float "price", default: 0.0
+    t.float "price", limit: 24, default: 0.0
     t.string "category", default: "QTY"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "line_items", force: :cascade do |t|
+  create_table "line_items", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "item_id"
     t.integer "order_id"
     t.string "name"
     t.text "description"
     t.integer "quantity", default: 0
-    t.float "price", default: 0.0
-    t.float "total", default: 0.0
+    t.float "price", limit: 24, default: 0.0
+    t.float "total", limit: 24, default: 0.0
     t.string "category", default: "QTY"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "orders", force: :cascade do |t|
+  create_table "orders", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email"
-    t.float "total", default: 0.0
+    t.float "total", limit: 24, default: 0.0
     t.integer "items_count", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

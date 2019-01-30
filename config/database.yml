@@ -5,21 +5,22 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: mysql2
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: c9
+  username: vimleshpatel
+  host: 0.0.0.0
+  
+  
+## start MySQL. Will create an empty database on first start
+# mysql-ctl start
 
-# Warning: The database defined as "test" will be erased and
-# re-generated from your development database when you run "rake".
-# Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: db/test.sqlite3
+## stop MySQL
+# mysql-ctl stop
 
-production:
-  <<: *default
-  database: db/production.sqlite3
+## run the MySQL interactive shell
+# mysql-ctl cli
