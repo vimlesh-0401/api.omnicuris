@@ -11,8 +11,9 @@ default: &default
 
 development:
   <<: *default
-  database: c9
-  username: vimleshpatel
+  database: database_name
+  username: username
+  password: password
   host: 0.0.0.0
   
   

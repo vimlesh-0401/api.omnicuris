@@ -18,7 +18,10 @@
   3. install bundle
      ```
       bundle install
+      cp config/database.yml.example config/database.yml
+      
       # Update database.yml file for any changes in database name
+      
       rake db:create db:migrate
      ```
   4. Start server
