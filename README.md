@@ -1,6 +1,11 @@
 ## Rails API
  This is an api only rails application that give json reponses and exposes different endpoints.
 
+  ### Prerequisites
+    ```
+        ruby >= 2.4
+        rails >= 5.1
+    ```
   ### SETUP AND CONFIGURATIONS
   1. clone form command prompt
      ```
